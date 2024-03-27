@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  app-app-listado,
+  app-app-examenes {
+    flex: 1;
+    margin-right: 10px; // Añade espacio entre los componentes si es necesario
+  }

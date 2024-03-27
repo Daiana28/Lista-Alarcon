@@ -1,0 +1,72 @@
+
+<!--* 
+-----------------------------------------------------------------
+ESTO PERTENECE A APP-TOOLBAR
+-----------------------------------------------------------------
+
+<h1>Bienvenidos a la plataforma de la Universidad de Morón</h1>
+<h2>Carrera de Arquitectura y Diseño</h2>
+
+<br>
+
+<p>
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum dicta,
+  blanditiis rem impedit, quo autem in explicabo quibusdam, nesciunt tempore
+  ipsa itaque distinctio consectetur necessitatibus amet aut qui doloremque dolor?
+</p>
+<hr>
+
+-----------------------------------------------------------------
+ESTO PERTENECE A APP-LISTADO
+-----------------------------------------------------------------
+<h3>Listado de Alumnos 2024 - Carrera de Arquitectura y Diseño</h3>
+
+<button (click)="mostrarListado = !mostrarListado">Ver Listado</button>
+
+<ul *ngIf="mostrarListado">
+  @for (student of students; track $index) {
+    <li> {{ $index }} - {{ student }}  </li>
+  }
+
+<br>
+
+<button (click)="ocultarFrase= !ocultarFrase">ver más</button>
+
+<h5 *ngIf="ocultarFrase"
+[ngClass]="hasError ? 'error' : 'success'"
+[style.font-weight]="hasError ? 700 : 400"
+[ngStyle]="{
+  'text-decoration': hasError ? 'underline' : 'unset'
+ }">
+Por el momento no figuran más alumnos en el listado. Prueba más tarde. </h5>
+
+</ul>
+
+<hr>
+
+
+<div class="main-grid-layout">
+  <app-app-toolbar class="toolbar"></app-app-toolbar>
+  <app-app-listado class="listado"></app-app-listado>
+  <app-app-examenes class="examenes"></app-app-examenes>
+
+</div>
+
+-->
+
+<div class="container">
+  <app-app-toolbar></app-app-toolbar>
+
+  <div class="content">
+    <app-app-listado>
+      <app-app-listado></app-app-listado>
+    </app-app-listado>
+
+    <app-app-examenes>
+      <app-app-examenes></app-app-examenes>
+    </app-app-examenes>
+    
+  </div>
+</div>
+
+

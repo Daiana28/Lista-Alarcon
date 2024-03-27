@@ -1,0 +1,25 @@
+<h3>Listado de Alumnos 2024 - Carrera de Arquitectura y Diseño</h3>
+
+<button (click)="mostrarListado = !mostrarListado">Ver Listado</button>
+
+<ul *ngIf="mostrarListado">
+  @for (student of students; track $index) {
+    <li> {{ $index }} - {{ student }}  </li>
+  }
+
+
+<br>
+
+<button (click)="ocultarFrase= !ocultarFrase">ver más</button>
+
+
+<h5 *ngIf="ocultarFrase"
+[ngClass]="hasError ? 'error' : 'success'"
+[style.font-weight]="hasError ? 700 : 400"
+[ngStyle]="{
+  'text-decoration': hasError ? 'underline' : 'unset'
+ }">
+Por el momento no figuran más alumnos en el listado. Prueba más tarde. </h5>
+
+
+</ul>

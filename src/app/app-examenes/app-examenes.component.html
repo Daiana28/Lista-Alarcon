@@ -1,0 +1,28 @@
+<h3>Exámenes 2024</h3>
+
+<select (change)="onSelectChange($event)">
+  <option value="confirmados">confirmados</option>
+  <option value="cancelados">cancelados</option>
+  <option value="pendientes">pendientes</option>
+
+
+</select>
+
+<div [ngSwitch]="status">
+
+  <p *ngSwitchCase="'confirmados'"> Exámenes: 12 exámenes disponibles para anotarte a rendir.</p>
+  <p *ngSwitchCase="'cancelados'"> Importante: Se canceló el exámen de la materia Arquitectura el día 10/05/2024.</p>
+  <p *ngSwitchCase="'pendientes'"> Hasta el 10/07/2024 inclusive, estarán pendientes a confirmar las siguientes fechas de exámenes:</p>
+    
+    <ul>Historia del Arte y de la Arquitectura</ul>
+    <ul>Historia I</ul>
+    <ul> Arquitectura II</ul>
+    <ul> Métodos de la investigación</ul>
+
+</div>
+
+<hr>
+
+<h3>Próximas fechas de exámen</h3>
+
+<p>Tu próxima fecha de examen es {{ examen | date }}</p>
